@@ -1,4 +1,6 @@
-﻿namespace accounts2
+﻿using accounts2.MenuPanels;
+
+namespace accounts2
 {
     partial class HomeScreen
     {
@@ -29,9 +31,16 @@
         private void InitializeComponent()
         {
             this.mainTableLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.rightCenteringLayout = new System.Windows.Forms.TableLayoutPanel();
+            // 🔴 REMOVED: this.rightCenteringLayout = new System.Windows.Forms.TableLayoutPanel();
+            // 🔴 ADD: Simple Panel for content
+            this.rightContentPanel = new System.Windows.Forms.Panel();
+            this.leftPanel = new System.Windows.Forms.Panel(); // 🔴 ADD: Left panel placeholder
+
             this.mainTableLayout.SuspendLayout();
+            // 🔴 REMOVED: this.rightCenteringLayout.SuspendLayout();
+            this.rightContentPanel.SuspendLayout(); // 🔴 ADD
             this.SuspendLayout();
+
             // 
             // mainTableLayout
             // 
@@ -39,7 +48,9 @@
             this.mainTableLayout.ColumnCount = 2;
             this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.mainTableLayout.Controls.Add(this.rightCenteringLayout, 1, 0);
+            // 🔴 CHANGED: Add leftPanel first, then rightContentPanel
+            this.mainTableLayout.Controls.Add(this.leftPanel, 0, 0); // 🔴 ADD
+            this.mainTableLayout.Controls.Add(this.rightContentPanel, 1, 0); // 🔴 CHANGED
             this.mainTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainTableLayout.Location = new System.Drawing.Point(0, 0);
             this.mainTableLayout.Name = "mainTableLayout";
@@ -47,22 +58,29 @@
             this.mainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.mainTableLayout.Size = new System.Drawing.Size(1478, 690);
             this.mainTableLayout.TabIndex = 0;
+
             // 
-            // rightCenteringLayout
+            // 🔴 REMOVED ENTIRE rightCenteringLayout SECTION
             // 
-            this.rightCenteringLayout.ColumnCount = 3;
-            this.rightCenteringLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.rightCenteringLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.rightCenteringLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.rightCenteringLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rightCenteringLayout.Location = new System.Drawing.Point(742, 4);
-            this.rightCenteringLayout.Name = "rightCenteringLayout";
-            this.rightCenteringLayout.RowCount = 3;
-            this.rightCenteringLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.rightCenteringLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.rightCenteringLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.rightCenteringLayout.Size = new System.Drawing.Size(732, 682);
-            this.rightCenteringLayout.TabIndex = 0;
+            // 🔴 ADD: leftPanel
+            // 
+            this.leftPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.leftPanel.Location = new System.Drawing.Point(4, 4);
+            this.leftPanel.Name = "leftPanel";
+            this.leftPanel.Size = new System.Drawing.Size(731, 682);
+            this.leftPanel.TabIndex = 0;
+
+            // 
+            // 🔴 ADD: rightContentPanel (replaces rightCenteringLayout)
+            // 
+            this.rightContentPanel.AutoScroll = true; // 🔴 KEY: Allows scrolling for large panels
+            this.rightContentPanel.Controls.Add(this.gatewayoftallypanel); // 🔴 Will be added in code
+            this.rightContentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rightContentPanel.Location = new System.Drawing.Point(742, 4);
+            this.rightContentPanel.Name = "rightContentPanel";
+            this.rightContentPanel.Size = new System.Drawing.Size(732, 682);
+            this.rightContentPanel.TabIndex = 0;
+
             // 
             // HomeScreen
             // 
@@ -73,6 +91,8 @@
             this.Name = "HomeScreen";
             this.Size = new System.Drawing.Size(1478, 690);
             this.mainTableLayout.ResumeLayout(false);
+            // 🔴 REMOVED: this.rightCenteringLayout.ResumeLayout(false);
+            this.rightContentPanel.ResumeLayout(false); // 🔴 ADD
             this.ResumeLayout(false);
 
         }
@@ -80,6 +100,10 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel mainTableLayout;
-        private System.Windows.Forms.TableLayoutPanel rightCenteringLayout;
+        // 🔴 REMOVED: private System.Windows.Forms.TableLayoutPanel rightCenteringLayout;
+        // 🔴 ADD: New panel for content
+        private System.Windows.Forms.Panel rightContentPanel;
+        private System.Windows.Forms.Panel leftPanel; // 🔴 ADD
+        private GatewayofTallypanel gatewayoftallypanel; // 🔴 ADD (move from code-behind)
     }
 }

@@ -57,7 +57,7 @@
             this.titleLabel.ForeColor = System.Drawing.Color.White;
             this.titleLabel.Location = new System.Drawing.Point(0, 0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(300, 30);
+            this.titleLabel.Size = new System.Drawing.Size(368, 30);
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "Gateway of Tally";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -103,7 +103,7 @@
             this.mainPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.mainPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.mainPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.mainPanel.Size = new System.Drawing.Size(300, 520);
+            this.mainPanel.Size = new System.Drawing.Size(368, 594);
             this.mainPanel.TabIndex = 1;
             // 
             // mastersLabel
@@ -114,7 +114,7 @@
             this.mastersLabel.ForeColor = System.Drawing.Color.Black;
             this.mastersLabel.Location = new System.Drawing.Point(3, 0);
             this.mastersLabel.Name = "mastersLabel";
-            this.mastersLabel.Size = new System.Drawing.Size(294, 25);
+            this.mastersLabel.Size = new System.Drawing.Size(362, 25);
             this.mastersLabel.TabIndex = 0;
             this.mastersLabel.Text = "Masters";
             this.mastersLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -128,7 +128,7 @@
             this.btnAccountsInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccountsInfo.Location = new System.Drawing.Point(3, 28);
             this.btnAccountsInfo.Name = "btnAccountsInfo";
-            this.btnAccountsInfo.Size = new System.Drawing.Size(294, 30);
+            this.btnAccountsInfo.Size = new System.Drawing.Size(362, 30);
             this.btnAccountsInfo.TabIndex = 1;
             this.btnAccountsInfo.Text = "Accounts Info";
             this.btnAccountsInfo.UseVisualStyleBackColor = false;
@@ -142,7 +142,7 @@
             this.btnInventoryInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventoryInfo.Location = new System.Drawing.Point(3, 64);
             this.btnInventoryInfo.Name = "btnInventoryInfo";
-            this.btnInventoryInfo.Size = new System.Drawing.Size(294, 30);
+            this.btnInventoryInfo.Size = new System.Drawing.Size(362, 30);
             this.btnInventoryInfo.TabIndex = 2;
             this.btnInventoryInfo.Text = "Inventory Info";
             this.btnInventoryInfo.UseVisualStyleBackColor = false;
@@ -155,7 +155,7 @@
             this.transactionsLabel.ForeColor = System.Drawing.Color.Black;
             this.transactionsLabel.Location = new System.Drawing.Point(3, 97);
             this.transactionsLabel.Name = "transactionsLabel";
-            this.transactionsLabel.Size = new System.Drawing.Size(294, 25);
+            this.transactionsLabel.Size = new System.Drawing.Size(362, 25);
             this.transactionsLabel.TabIndex = 3;
             this.transactionsLabel.Text = "Transactions";
             this.transactionsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -169,7 +169,7 @@
             this.btnAccountingVouchers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccountingVouchers.Location = new System.Drawing.Point(3, 125);
             this.btnAccountingVouchers.Name = "btnAccountingVouchers";
-            this.btnAccountingVouchers.Size = new System.Drawing.Size(294, 30);
+            this.btnAccountingVouchers.Size = new System.Drawing.Size(362, 30);
             this.btnAccountingVouchers.TabIndex = 4;
             this.btnAccountingVouchers.Text = "Accounting Vouchers";
             this.btnAccountingVouchers.UseVisualStyleBackColor = false;
@@ -183,7 +183,7 @@
             this.btnInventoryVouchers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventoryVouchers.Location = new System.Drawing.Point(3, 161);
             this.btnInventoryVouchers.Name = "btnInventoryVouchers";
-            this.btnInventoryVouchers.Size = new System.Drawing.Size(294, 30);
+            this.btnInventoryVouchers.Size = new System.Drawing.Size(362, 30);
             this.btnInventoryVouchers.TabIndex = 5;
             this.btnInventoryVouchers.Text = "Inventory Vouchers";
             this.btnInventoryVouchers.UseVisualStyleBackColor = false;
@@ -196,7 +196,7 @@
             this.utilitiesLabel.ForeColor = System.Drawing.Color.Black;
             this.utilitiesLabel.Location = new System.Drawing.Point(3, 194);
             this.utilitiesLabel.Name = "utilitiesLabel";
-            this.utilitiesLabel.Size = new System.Drawing.Size(294, 25);
+            this.utilitiesLabel.Size = new System.Drawing.Size(362, 25);
             this.utilitiesLabel.TabIndex = 6;
             this.utilitiesLabel.Text = "Utilities";
             this.utilitiesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -210,7 +210,7 @@
             this.btnImportData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImportData.Location = new System.Drawing.Point(3, 222);
             this.btnImportData.Name = "btnImportData";
-            this.btnImportData.Size = new System.Drawing.Size(294, 30);
+            this.btnImportData.Size = new System.Drawing.Size(362, 30);
             this.btnImportData.TabIndex = 7;
             this.btnImportData.Text = "Import Data";
             this.btnImportData.UseVisualStyleBackColor = false;
@@ -224,7 +224,7 @@
             this.btnBanking.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBanking.Location = new System.Drawing.Point(3, 258);
             this.btnBanking.Name = "btnBanking";
-            this.btnBanking.Size = new System.Drawing.Size(294, 30);
+            this.btnBanking.Size = new System.Drawing.Size(362, 30);
             this.btnBanking.TabIndex = 8;
             this.btnBanking.Text = "Banking";
             this.btnBanking.UseVisualStyleBackColor = false;
@@ -237,7 +237,7 @@
             this.reportsLabel.ForeColor = System.Drawing.Color.Black;
             this.reportsLabel.Location = new System.Drawing.Point(3, 291);
             this.reportsLabel.Name = "reportsLabel";
-            this.reportsLabel.Size = new System.Drawing.Size(294, 25);
+            this.reportsLabel.Size = new System.Drawing.Size(362, 25);
             this.reportsLabel.TabIndex = 9;
             this.reportsLabel.Text = "Reports";
             this.reportsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -251,7 +251,7 @@
             this.btnBalanceSheet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBalanceSheet.Location = new System.Drawing.Point(3, 319);
             this.btnBalanceSheet.Name = "btnBalanceSheet";
-            this.btnBalanceSheet.Size = new System.Drawing.Size(294, 30);
+            this.btnBalanceSheet.Size = new System.Drawing.Size(362, 30);
             this.btnBalanceSheet.TabIndex = 10;
             this.btnBalanceSheet.Text = "Balance Sheet";
             this.btnBalanceSheet.UseVisualStyleBackColor = false;
@@ -265,7 +265,7 @@
             this.btnProfitLoss.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfitLoss.Location = new System.Drawing.Point(3, 355);
             this.btnProfitLoss.Name = "btnProfitLoss";
-            this.btnProfitLoss.Size = new System.Drawing.Size(294, 30);
+            this.btnProfitLoss.Size = new System.Drawing.Size(362, 30);
             this.btnProfitLoss.TabIndex = 11;
             this.btnProfitLoss.Text = "Profit & Loss A/c";
             this.btnProfitLoss.UseVisualStyleBackColor = false;
@@ -279,7 +279,7 @@
             this.btnStockSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStockSummary.Location = new System.Drawing.Point(3, 391);
             this.btnStockSummary.Name = "btnStockSummary";
-            this.btnStockSummary.Size = new System.Drawing.Size(294, 30);
+            this.btnStockSummary.Size = new System.Drawing.Size(362, 30);
             this.btnStockSummary.TabIndex = 12;
             this.btnStockSummary.Text = "Stock Summary";
             this.btnStockSummary.UseVisualStyleBackColor = false;
@@ -293,7 +293,7 @@
             this.btnRatioAnalysis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRatioAnalysis.Location = new System.Drawing.Point(3, 427);
             this.btnRatioAnalysis.Name = "btnRatioAnalysis";
-            this.btnRatioAnalysis.Size = new System.Drawing.Size(294, 30);
+            this.btnRatioAnalysis.Size = new System.Drawing.Size(362, 30);
             this.btnRatioAnalysis.TabIndex = 13;
             this.btnRatioAnalysis.Text = "Ratio Analysis";
             this.btnRatioAnalysis.UseVisualStyleBackColor = false;
@@ -307,7 +307,7 @@
             this.buttonDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDisplay.Location = new System.Drawing.Point(3, 463);
             this.buttonDisplay.Name = "buttonDisplay";
-            this.buttonDisplay.Size = new System.Drawing.Size(294, 30);
+            this.buttonDisplay.Size = new System.Drawing.Size(362, 56);
             this.buttonDisplay.TabIndex = 14;
             this.buttonDisplay.Text = "Display";
             this.buttonDisplay.UseVisualStyleBackColor = false;
@@ -319,9 +319,9 @@
             this.quitButton.FlatAppearance.BorderSize = 0;
             this.quitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.quitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quitButton.Location = new System.Drawing.Point(3, 499);
+            this.quitButton.Location = new System.Drawing.Point(3, 525);
             this.quitButton.Name = "quitButton";
-            this.quitButton.Size = new System.Drawing.Size(294, 30);
+            this.quitButton.Size = new System.Drawing.Size(362, 66);
             this.quitButton.TabIndex = 15;
             this.quitButton.Text = "Quit";
             this.quitButton.UseVisualStyleBackColor = false;
@@ -335,7 +335,7 @@
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.titleLabel);
             this.Name = "GatewayofTallypanel";
-            this.Size = new System.Drawing.Size(300, 550);
+            this.Size = new System.Drawing.Size(368, 624);
             this.mainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 

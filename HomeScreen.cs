@@ -13,29 +13,94 @@ namespace accounts2
 {
     public partial class HomeScreen : UserControl, IDataExchange
     {
-        private GatewayofTallypanel gatewayoftallypanel; 
-            
+        // 🔴 MOVED TO DESIGNER: private GatewayofTallypanel gatewayoftallypanel;
+
         public HomeScreen()
         {
             InitializeComponent();
+            LoadGatewayPanel();
+        }
+
+        private void LoadGatewayPanel()
+        {
+            // Create GatewayofTallypanel instance
             this.gatewayoftallypanel = new GatewayofTallypanel();
-            this.gatewayoftallypanel.Dock = DockStyle.Fill;
+            // 🔴 CHANGED: Don't dock fill, center instead
+            this.gatewayoftallypanel.Dock = DockStyle.None; // 🔴 CHANGED
+            this.gatewayoftallypanel.Anchor = AnchorStyles.None; // 🔴 ADD: Center it
             this.gatewayoftallypanel.Name = "gatewayoftallypanel";
             this.gatewayoftallypanel.TabIndex = 0;
-            this.rightCenteringLayout.Controls.Add(this.gatewayoftallypanel, 1, 1);
 
+            // 🔴 CHANGED: Add directly to rightContentPanel, not to table cell
+            this.rightContentPanel.Controls.Add(this.gatewayoftallypanel);
+
+            // 🔴 ADD: Center the panel
+            CenterPanel(this.gatewayoftallypanel);
+
+            // 🔴 ADD: Handle resize to keep centered
+            this.rightContentPanel.Resize += (s, e) => CenterPanel(this.gatewayoftallypanel);
         }
+
+        // 🔴 ADD: Method to center panel
+        private void CenterPanel(Control panel)
+        {
+            if (panel != null)
+            {
+                panel.Location = new Point(
+                    Math.Max(0, (rightContentPanel.Width - panel.Width) / 2),
+                    Math.Max(0, (rightContentPanel.Height - panel.Height) / 2)
+                );
+            }
+        }
+
+        // 🔴 ADD: Method to load any panel dynamically
+        public void LoadPanel(UserControl panel)
+        {
+            // Remove existing panel
+            if (this.gatewayoftallypanel != null)
+            {
+                this.rightContentPanel.Controls.Remove(this.gatewayoftallypanel);
+                this.gatewayoftallypanel.Dispose();
+            }
+
+            // Set new panel
+            this.gatewayoftallypanel = panel as GatewayofTallypanel; // Adjust type as needed
+
+            if (panel != null)
+            {
+                panel.Dock = DockStyle.None;
+                panel.Anchor = AnchorStyles.None;
+                panel.Name = "dynamicPanel";
+
+                this.rightContentPanel.Controls.Add(panel);
+                CenterPanel(panel);
+
+                this.rightContentPanel.Resize -= (s, e) => CenterPanel(panel);
+                this.rightContentPanel.Resize += (s, e) => CenterPanel(panel);
+            }
+        }
+
+        // Property to access the gateway panel
+        public GatewayofTallypanel GatewayPanel
+        {
+            get { return gatewayoftallypanel; }
+        }
+
         // IDataExchange Implementation (required by your architecture)
         public void ReceiveData(object data)
         {
             // Handle incoming data from other forms
-            // Example: populate left panel content based on data
+            // Pass data to gateway panel if needed
+            if (gatewayoftallypanel != null)
+            {
+                gatewayoftallypanel.ReceiveData(data);
+            }
         }
 
         public object GetData()
         {
-            // Return data to be passed to other forms
-            return null; // Return relevant data when needed
+            // Return data from gateway panel
+            return gatewayoftallypanel?.GetData();
         }
     }
 }
