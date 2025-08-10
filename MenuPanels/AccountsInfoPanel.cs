@@ -10,18 +10,15 @@ using System.Windows.Forms;
 
 namespace accounts2.MenuPanels
 {
-    public partial class GatewayofTallypanel : UserControl, IDataExchange
+    public partial class AccountsInfoPanel : UserControl, IDataExchange
     {
-        public GatewayofTallypanel()
+        public AccountsInfoPanel()
         {
             InitializeComponent();
         }
         public void ReceiveData(object data) { }
         public object GetData() { return null; }
 
-        private void btnAccountsInfo_Click(object sender, EventArgs e)
-        {
-
-        }
+     
     }
 }

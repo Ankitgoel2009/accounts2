@@ -59,6 +59,12 @@
     <Compile Include="HomeScreen.Designer.cs">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuPanels\AccountsInfoPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuPanels\AccountsInfoPanel.Designer.cs">
+      <DependentUpon>AccountsInfoPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuPanels\GatewayofTallypanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     <Compile Include="TextCompressionManager.cs" />
     <EmbeddedResource Include="HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPanels\AccountsInfoPanel.resx">
+      <DependentUpon>AccountsInfoPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPanels\GatewayofTallypanel.resx">
       <DependentUpon>GatewayofTallypanel.cs</DependentUpon>
