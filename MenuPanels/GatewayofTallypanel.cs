@@ -19,9 +19,6 @@ namespace accounts2.MenuPanels
         public void ReceiveData(object data) { }
         public object GetData() { return null; }
 
-        private void sectionsTableLayout_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+     
     }
 }
